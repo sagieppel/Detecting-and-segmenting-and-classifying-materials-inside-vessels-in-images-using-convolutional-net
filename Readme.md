@@ -1,4 +1,4 @@
-﻿# Detecting and segmenting and classifying materials inside vessels in images using a fully convolutional neural net.
+﻿# Detecting and segmenting and classifying materials inside vessels in images using a fully convolutional neural net ,for chemistry laboratory and general setting.
 
 
 Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granular... In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels).  
