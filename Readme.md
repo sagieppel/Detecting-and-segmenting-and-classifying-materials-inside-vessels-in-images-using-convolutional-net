@@ -74,7 +74,7 @@ Note: RunPredictionOnFolder.py should run out of the box (as is) using the sampl
 
 * Around 28000 training steps which correspond to two days training with Titan TX should give a model of the same performance as the one that can be download from [here]
 # Code file structure
-RunPredictionOnFolder.py Run prediction on image using pre-trained image
+RunPredictionOnFolder.py: Run prediction on image using pre-trained image
 
 Train.py: Training the net of the [LabPics](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) dataset
 
