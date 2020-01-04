@@ -46,7 +46,7 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 
 
 # Running inference on image and predicting segment mask
-1. Download the code with trained model weight from [Here]() or train the model yourself using the instructions of the Training section.
+1. Download the code with trained model weight from [Here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or train the model yourself using the instructions of the Training section.
 2. Open the RunPredictionOnFolder.py script.
 3. Set the path to the folder where the images are stored to the: InputDir parameter (all the images in the input folder should be in .jpg or .png format)
 4. Set the output folder where the output will be stored to the: OutDir parameter.
