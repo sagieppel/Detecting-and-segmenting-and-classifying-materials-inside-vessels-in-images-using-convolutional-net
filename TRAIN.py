@@ -10,9 +10,9 @@ import CategoryDictionary as CatDic
 import Evaluator
 import scipy.misc as misc
 #-------------------------------------Input parameters-----------------------------------------------------------------------
-TrainFolderPath=r"/scratch/gobi2/seppel/Chemscape/ChemPicsV1.0/"
+TrainFolderPath=r"/scratch/gobi2/seppel/Chemscape/LabPicsV1/"
 
-ChemTrainDir=TrainFolderPath+r"/Complex/Merged//" #Input training data from the LabPics dataset
+ChemTrainDir=TrainFolderPath+r"/Complex/Train//" #Input training data from the LabPics dataset
 ChemTestDir=TrainFolderPath+r"/Complex/Test//" # Input testing data  from the LabPics dataset
 
 
