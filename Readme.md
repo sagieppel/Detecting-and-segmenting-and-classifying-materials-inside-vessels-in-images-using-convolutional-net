@@ -3,7 +3,7 @@
 
 Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granular... In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels).
 
-### This net with a pretrained model that can be run out of the box, without training can be download from [here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing).
+### This net with a pretrained model that can be run out of the box, without training can be download from [here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or [here](https://drive.google.com/file/d/1DUJizPcyU1fjfZuWRMCc4x53mXUzSsoT/view?usp=sharing).
 
 # General
 The net focus on detecting vessels and their content materials in images. The focus is on both chemistry lab setting and general everyday setting (beverage, kitchen..) but should work in any conditions or setting. The net should recognize any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general environment and setting. The accuracy of the net is relatively high in detecting and classifying vessels, filled regions, liquid regions, and solid regions. The classification accuracy for fine-grained material classes such as foams, powder, gels, etc., is lower. If you encounter cases on which the net performs badly, please send me the images so I can use them to improve the network.
@@ -48,7 +48,7 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 
 
 # Running inference on image and predicting segment mask
-1. Download the code with trained model weight from [Here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or train the model yourself using the instructions of the Training section.
+1. Download the code with trained model weight from [Here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or [here] (https://drive.google.com/file/d/1DUJizPcyU1fjfZuWRMCc4x53mXUzSsoT/view?usp=sharing). or train the model yourself using the instructions of the Training section.
 2. Open the RunPredictionOnFolder.py script.
 3. Set the path to the folder where the images are stored to the: InputDir parameter (all the images in the input folder should be in .jpg or .png format)
 4. Set the output folder where the output will be stored to the: OutDir parameter.
@@ -101,4 +101,4 @@ The [LabPics dataset](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsX
 # Links
 LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 
-Train model for this net can be download from [here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or [here]()
+Train model for this net can be download from [here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or [here](https://drive.google.com/file/d/1DUJizPcyU1fjfZuWRMCc4x53mXUzSsoT/view?usp=sharing).
