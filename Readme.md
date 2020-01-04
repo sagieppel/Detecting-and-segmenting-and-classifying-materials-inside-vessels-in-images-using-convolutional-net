@@ -84,13 +84,13 @@ Evaluator.py: Evaluate the net performance during training (Used by Train.py)
 
 CategoryDictionary.py: List of classes and subclasses used by the net and LabPics dataset.
 
-Logs folder: Folder where the trained models and train data are stored.
+Logs folder: Folder where the trained models and training logs are stored.
 
 InputImages Folder: Example input images for the net.
 
 
 # Notes/Thanks
-The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab,Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab, Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
 
 Work was done in the Matter Lab (Alan Aspuru Guzik group) and the Vector institute Toronto.
 
