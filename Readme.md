@@ -90,9 +90,9 @@ InputImages Folder: Example input images for the net.
 
 
 # Notes/Thanks
-The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)   dataset were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab,Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab,Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
 
-Work was done in the Matter Lab (Alan Aspuru Gusnik group) and Vector institute Toronto.
+Work was done in the Matter Lab (Alan Aspuru Gusnik group) and the Vector institute Toronto.
 
 The [LabPics dataset]((https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing) was made by Mor Bismuth.
 
