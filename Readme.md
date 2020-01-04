@@ -29,7 +29,8 @@ The net output of the region of the vessel/fill level and other materials phases
 ## Hardware
 For using the [trained net](), no specific hardware is needed, but the net will run much faster on Nvidia GPU.
 
-For training the net an Nvidia GPU is needed (the net was trained on Titan XT, and also on RTX 2070 with similar results)
+For training the net an Nvidia GPU is needed (the net was trained on Titan XP, and also on RTX 2070 with similar results)
+
 ## Software:
 This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/download/) with  [Pytorch 1](https://pytorch.org/) and OpenCV packages.
 
