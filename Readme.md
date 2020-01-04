@@ -2,7 +2,7 @@
 
 
 Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granular... In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels).
-This code with a trained model that can be run out of the box, without training can be download from (here) [].
+This code with a trained model that can be run out of the box, without training can be download from (here) [https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing].
 # General
 The net focus on detecting vessels and their content materials in images. The focus is on both chemistry lab setting and general everyday setting (beverage, kitchen..) but should work in any conditions or setting. The net should recognize any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general environment and setting. The accuracy of the net is relatively high in detecting and classifying vessels, filled regions, liquid regions, and solid regions. The classification accuracy for fine-grained material classes such as foams, powder, gels, etc., is lower. If you encounter cases on which the net performs badly, please send me the images so I can use them to improve the network.
 
@@ -25,7 +25,7 @@ The net output of the region of the vessel/fill level and other materials phases
 
 # Requirements
 ## Hardware
-For using the [trained net](), no specific hardware is needed, but the net will run much faster on Nvidia GPU.
+For using the [trained net](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing), no specific hardware is needed, but the net will run much faster on Nvidia GPU.
 
 For training the net an Nvidia GPU is needed (the net was trained on Titan XP, and also on RTX 2070 with similar results)
 
@@ -53,7 +53,7 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 5. Run script. 
 6. Output: predicted region for each input image and class would appear in the OutDir folder.
 
-Note: RunPredictionOnFolder.py should run out of the box (as is) using the sample images and [trained model]() provided.
+Note: RunPredictionOnFolder.py should run out of the box (as is) using the sample images and [trained model](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) provided.
   ## Additional parameters:
 * If you train the net yourself, set the path to your  trained model  in the Trained_model_path parameter
 *  If you have a Nvidia GPU and Cuda installed, set the UseGPU parameter to True (this will allow the net to achieve a much faster running time).
@@ -99,4 +99,4 @@ The [LabPics dataset](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsX
 # Links
 LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 
-Train model for this net can be download from [here]() or [here]()
+Train model for this net can be download from [here](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing) or [here]()
