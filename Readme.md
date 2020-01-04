@@ -1,12 +1,12 @@
 ﻿# Detecting and segmenting and classifying materials inside vessels in images using a fully convolutional neural net.
 
 
-Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granula. In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels).  
+Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granular... In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels).  
 
 
 This code with a trained model that can be run of the box without training can be download from (here) [].
 ## General 
-In general, the net focused on detecting vessels and their content materials in images. The focus is on chemistry lab conditions but should work in any condition or vessel. The net should recognize with any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general setting (kitchen/lab…). The accuracy of the net is relatively high in detecting classifying vessels, filled regions, liquid regions, and solid regions. The segmentation classification accuracy of cases as other materials such as foams powder etc.. might be lower. If you encounter cases that the net does not perform well on, please send me the images so I can use them to improve it.
+In general, the net focused on detecting vessels and their content materials in images. The focus is on both chemistry lab setting and general everyday setting (beavarage,kitchen..) but should work in any conditions or vessel. The net should recognize  any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general setting (kitchen/lab…). The accuracy of the net is relatively high in detecting and classifying vessels, filled regions, liquid regions, and solid regions. The classification accuracy of cases as other materials such as foams powder etc.. might be lower. If you encounter cases that the net does not perform well on, please send me the images so I can use them to improve it.
 
 
  ![](/Figure1.jpg)
@@ -25,17 +25,17 @@ The net output of the region of the vessel/fill level and other materials phases
 
 
 
-## Requirements
-# Hardware
+# Requirements
+## Hardware
 For using the [trained net](), no specific hardware is needed, but the net will run much faster on Nvidia GPU.
 For training the net an Nvidia GPU is needed (the net was trained on Titan XT, and also on RTX 2070 with similar results)
-# Software:
-This network was run with Python 3.7 [Anaconda]()(https://www.anaconda.com/download/) with  [Pytorch 1](https://pytorch.org/) and OpenCV packages.
+## Software:
+This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/download/) with  [Pytorch 1](https://pytorch.org/) and OpenCV packages.
 
 
 
 
-## Setup for running prediction
+# Setup for running prediction
 1) Install [Anaconda](https://www.anaconda.com/download/)
 2) Install [Pytorch](https://pytorch.org/)
 2) Install OpenCV
@@ -82,10 +82,10 @@ InputImages Folder: Example input images for the net
 
 
 # Notes/Thanks
-The training data for the [LabPics](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) dataset and images for this path were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, and from Instagram channels such as Chemlife organic Chemistry.
+The training data for the [LabPics](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) dataset and images for this path were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemlife organic Chemistry lab,Chemistry and me, Ministry Of Chemistry , vacuum distillation.
 Work was done in the Matter Lab (under Alan Aspuru Gusnik group) Toronto.
 The LabPics dataset was made by Mor Bismuth.
 
 # Links
 [LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting ]((https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) [or here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
-[Same Code with train model]() and [here]
+[Same Code with train model with train model]
