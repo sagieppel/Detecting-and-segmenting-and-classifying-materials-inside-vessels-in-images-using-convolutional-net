@@ -53,8 +53,9 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 3. Set the path to the folder where the images are stored to the: InputDir parameter (all the images in the input folder should be in .jpg or .png format)
 4. Set the output folder where the output will be stored to the: OutDir Parameter.
 5. Run script. 
-6. Output: predicted region for each input image and class would appear in the OutDir folder. 
-Note: RunPredictionOnFolder.py should run out of the box (as is using) the sample images and [trained model]() provided.
+6. Output: predicted region for each input image and class would appear in the OutDir folder.
+
+Note: RunPredictionOnFolder.py should run out of the box (as is) using the sample images and [trained model]() provided.
   ## Additional parameters:
 * If you train the net yourself, set the path to your  trained model  in the Trained_model_path parameter
 *  If you have a Nvidia GPU and Cuda installed, set the UseGPU parameter to True (this will allow the net to achieve a much faster running time).
