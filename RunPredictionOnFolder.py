@@ -50,8 +50,8 @@ for name in os.listdir(InputDir): # Main read and predict results for all files
         if Lb.mean()<0.001: continue
         if nm=='Ignore': continue
         ImOverlay1 = Im.copy()
-        ImOverlay1[:, :, 0][Lb==1] = 0
-        ImOverlay1[:, :, 1][Lb==1] = 255
+        ImOverlay1[:, :, 0][Lb==1] = 255
+        ImOverlay1[:, :, 1][Lb==1] = 0
         ImOverlay1[:, :, 2][Lb==1] = 255
         FinIm=np.concatenate([Im,ImOverlay1],axis=1)
         OutPath = OutDir + "//" + nm+"/"
