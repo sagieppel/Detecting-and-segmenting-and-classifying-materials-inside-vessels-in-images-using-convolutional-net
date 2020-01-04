@@ -49,7 +49,7 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 1. Download the code with trained model weight from [Here]() or train the model yourself using the instructions of the Training section.
 2. Open the RunPredictionOnFolder.py script.
 3. Set the path to the folder where the images are stored to the: InputDir parameter (all the images in the input folder should be in .jpg or .png format)
-4. Set the output folder where the output will be stored to the: OutDir Parameter.
+4. Set the output folder where the output will be stored to the: OutDir parameter.
 5. Run script. 
 6. Output: predicted region for each input image and class would appear in the OutDir folder.
 
