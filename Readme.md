@@ -6,7 +6,7 @@ Neural net that given an image, detects and segments and classifies the vessels 
 
 This code with a trained model that can be run of the box without training can be download from (here) [].
 ## General 
-In general, the net focused on detecting vessels and their content materials in images. The focus is on both chemistry lab setting and general everyday setting (beavarage,kitchen..) but should work in any conditions or vessel. The net should recognize  any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general setting (kitchen/lab…). The accuracy of the net is relatively high in detecting and classifying vessels, filled regions, liquid regions, and solid regions. The classification accuracy of cases as other materials such as foams powder etc.. might be lower. If you encounter cases that the net does not perform well on, please send me the images so I can use them to improve it.
+In general, the net focused on detecting vessels and their content materials in images. The focus is on both chemistry lab setting and general everyday setting (beavarage,kitchen..) but should work in any conditions or vessel. The net should recognize  any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general enviroment and setting. The accuracy of the net is relatively high in detecting and classifying vessels, filled regions, liquid regions, and solid regions. The classification accuracy of cases as other materials such as foams powder etc.. might be lower. If you encounter cases that the net does not perform well on, please send me the images so I can use them to improve it.
 
 
  ![](/Figure1.jpg)
