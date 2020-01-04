@@ -2,7 +2,7 @@
 
 
 Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granular... In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels).
-This code with a trained model that can be run out of the box without training can be download from (here) [].
+This code with a trained model that can be run out of the box, without training can be download from (here) [].
 # General
 The net focus on detecting vessels and their content materials in images. The focus is on both chemistry lab setting and general everyday setting (beverage, kitchen..) but should work in any conditions or setting. The net should recognize any transparent vessel (bottle/glass /or lab vessel) and their content and some none transparent vessels in any general environment and setting. The accuracy of the net is relatively high in detecting and classifying vessels, filled regions, liquid regions, and solid regions. The classification accuracy for fine-grained material classes such as foams, powder, gels, etc., is lower. If you encounter cases on which the net performs badly, please send me the images so I can use them to improve the network.
 
