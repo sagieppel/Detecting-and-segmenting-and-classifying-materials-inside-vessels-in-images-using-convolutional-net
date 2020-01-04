@@ -36,8 +36,8 @@ for name in os.listdir(InputDir): # Main read and predict results for all files
     Im=cv2.imread(InPath)
     h,w,d=Im.shape
     r=np.max([h,w])
-    if r>900: # Image larger then 900X900 are shrinked (this is not essential, but the net results might degrade when using to large images
-        fr=900/r
+    if r>840: # Image larger then 840X840 are shrinked (this is not essential, but the net results might degrade when using to large images
+        fr=840/r
         Im=cv2.resize(Im,(int(w*fr),int(h*fr)))
     Imgs=np.expand_dims(Im,axis=0)
     if not (type(Im) is np.ndarray): continue
@@ -50,9 +50,9 @@ for name in os.listdir(InputDir): # Main read and predict results for all files
         if Lb.mean()<0.001: continue
         if nm=='Ignore': continue
         ImOverlay1 = Im.copy()
-        ImOverlay1[:, :, 0][Lb==1] = 255
+        ImOverlay1[:, :, 0][Lb==1] = 0
         ImOverlay1[:, :, 1][Lb==1] = 255
-        ImOverlay1[:, :, 2][Lb==1] = 0
+        ImOverlay1[:, :, 2][Lb==1] = 255
         FinIm=np.concatenate([Im,ImOverlay1],axis=1)
         OutPath = OutDir + "//" + nm+"/"
 
