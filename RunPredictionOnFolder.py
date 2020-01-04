@@ -36,8 +36,8 @@ for name in os.listdir(InputDir): # Main read and predict results for all files
     Im=cv2.imread(InPath)
     h,w,d=Im.shape
     r=np.max([h,w])
-    if r>800: # Image larger then 800X800 are shrinked (this is not essential, but the net results might degrade when using to large images
-        fr=800/r
+    if r>900: # Image larger then 900X900 are shrinked (this is not essential, but the net results might degrade when using to large images
+        fr=900/r
         Im=cv2.resize(Im,(int(w*fr),int(h*fr)))
     Imgs=np.expand_dims(Im,axis=0)
     if not (type(Im) is np.ndarray): continue
