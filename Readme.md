@@ -27,7 +27,7 @@ The net output of the region of the vessel/fill level and other materials phases
 
 # Requirements
 ## Hardware
-For using the [trained net](https://drive.google.com/file/d/10gnZWp9lFbLYyiAFlUqgdSyIGU-Zmwi0/view?usp=sharing), no specific hardware is needed, but the net will run much faster on Nvidia GPU.
+For using the trained net, no specific hardware is needed, but the net will run much faster on Nvidia GPU.
 
 For training the net an Nvidia GPU is needed (the net was trained on Titan XP, and also on RTX 2070 with similar results)
 
