@@ -78,13 +78,13 @@ Train.py: Training the net of the [LabPics](https://drive.google.com/file/d/1TZa
 
 ChemReader.py: File reader for the LabPics dataset (used by the Train.py script)
 
-FCN_NetModel.py: The class containing the neural net module.
+FCN_NetModel.py: The class containing the neural net model.
 
 Evaluator.py: Evaluate the net performance during training (Used by Train.py)
 
 CategoryDictionary.py: List of classes and subclasses used by the net and LabPics dataset.
 
-Logs folder: Folder where the trained model and train relating data is stored.
+Logs folder: Folder where the trained models and train data are stored.
 
 InputImages Folder: Example input images for the net.
 
