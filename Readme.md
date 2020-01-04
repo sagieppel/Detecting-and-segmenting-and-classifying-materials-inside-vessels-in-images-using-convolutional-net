@@ -75,17 +75,24 @@ Note: RunPredictionOnFolder.py should run out of the box (as is) using the sampl
 * Around 28000 training steps which correspond to two days training with Titan TX should give a model of the same performance as the one that can be download from [here]
 # Code file structure
 RunPredictionOnFolder.py Run prediction on image using pre-trained image
+
 Train.py: Training the net of the [LabPics](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) dataset
+
 ChemReader.py: File reader for the LabPics dataset (used by the Train.py script)
+
 FCN_NetModel.py: The class containing the neural net module.
+
 Evaluator.py: Evaluate the net performance during training (Used by Train.py)
+
 CategoryDictionary.py: List of classes and subclasses used by the net and LabPics dataset.
-Logs folder: Folder where the trained model and train relating data is stored
-InputImages Folder: Example input images for the net
+
+Logs folder: Folder where the trained model and train relating data is stored.
+
+InputImages Folder: Example input images for the net.
 
 
 # Notes/Thanks
-The training data for the [LabPics](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) dataset and images for this path were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemlife organic Chemistry lab,Chemistry and me, Ministry Of Chemistry , vacuum distillation.
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)   dataset were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab,Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
 Work was done in the Matter Lab (under Alan Aspuru Gusnik group) Toronto.
 The LabPics dataset was made by Mor Bismuth.
 
