@@ -14,7 +14,7 @@ Figure 1) Input images and output results of the net.
 
 # Input and output of the net
 The input for the net is a standard image (Figure 1 right).
-The net output of the region of the vessel/fill level and other materials phases, and vessel parts in the image (Figure 1 left). For each class, the net will output a mask with the region of the image corresponding to this class in the image.
+The net output of the region of the vessel/fill level and other materials phases, and vessel parts in the image (Figure 1 left). For each class, the net will output a mask mask region of the image corresponding to this class in the image (Figure 1 left).
 
 
 
