@@ -63,16 +63,47 @@ Note: RunPredictionOnFolder.py should run out of the box (as is) using the sampl
 
 
 
-
 # Training
+There are two training options: one is to train using only with LabPics dataset, this is faster, simpler and gives more accurate results on the test set. The second training option is to use a combination of the LabPics dataset and Vessels classes from the [COCO panoptic dataset] (http://cocodataset.org/#download)(Such as bottles/glasses/jars..). This option is more complex to train and gives lower accuracy on the test set but gives a more robust net. 
+
+
+# Training simple (only LabPics)
 1. Download the LabPics data set from [Here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 2. Open the Train.py script
-3. Set the path to the LabPics to the TrainFolderPath parameters.
+3. Set the path to the LabPics dataset main folder to the TrainFolderPath parameter.
 4. Run the script 
 5. Output trained model will appear in the /log subfolder or any folder set in Trained model Path.
-
-
 * Around 28000 training steps which correspond to two days training with Titan TX should give a model of the same performance as the one that can be download from [here]
+
+
+
+
+
+
+# Training second option (With LabPics dataset and Vessels from  the COCO panoptic dataset)
+### Downloading datasets
+1. Download the LabPics data set from [Here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
+
+
+2. Download the [COCO panoptic dataset] (http://cocodataset.org/#download) annotation and train images.
+### Converting COCO dataset into training data
+3. Open script TrainingDataGenerationCOCO/RunDataGeneration.py
+4. Set the COCO dataset image folder to the ImageDir parameter.
+5. Set the COCO panoptic annotation folder to the AnnotationDir parameter.
+6. Set the COCO panoptic .json file to the DataFile parameter.
+7. Set the output folder where the generated data will be saved to the OutDir parameter.
+8. Run script. 
+### Training
+9. Open the COCO_Train.py script
+10. Set the path to the LabPics dataset main folder to the LabPicsTrainFolderPath parameters.
+11. Set the path to the COCO generated data OutDir (step 7)  to the COCO_TrainDir paramter.
+12. Run the script 
+13. Output trained model will appear in the /log_COCO subfolder or any folder set in Trained model Path
+
+
+
+
+
 # Code file structure
 RunPredictionOnFolder.py: Run prediction on image using pre-trained image
 
