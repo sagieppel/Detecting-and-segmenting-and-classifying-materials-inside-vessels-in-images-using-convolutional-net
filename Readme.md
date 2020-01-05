@@ -126,12 +126,14 @@ InputImages Folder: Example input images for the net.
 ### For second training mode (with COCO)
 
 COCO_TRAIN.py:  Training script for second training mode (with COCO).
-CocoReader.py: Reader for the converted COCO data
-TrainingDataGenerationCOCO folder: Convert COCO dataset for training data
+
+CocoReader.py: Reader for the converted COCO data.
+
+TrainingDataGenerationCOCO folder: Convert COCO dataset for training data.
 
 
 
-# Notes/Thanks
+# Notes
 The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab, Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
 
 Work was done in the Matter Lab (Alan Aspuru Guzik group) and the Vector institute Toronto.
