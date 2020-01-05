@@ -44,10 +44,6 @@ Eval=Evaluator.Evaluator(ChemTestDir,TrainedModelWeightDir+"/Evaluat.xls")
 
 #----------------------------------------Create reader for /labpics data set--------------------------------------------------------------------------------------------------------------
 ChemReader=ChemReader.Reader(MainDir=ChemTrainDir,MaxBatchSize=MaxBatchSize,MinSize=MinSize,MaxSize=MaxSize,MaxPixels=MaxPixels,TrainingMode=True)
-# for ct in ChemReader.CatNum:
-#     CatDic.CatNum[ct]=ChemReader.CatNum[ct]
-# CatDic.NormalizeWeight(SomeWeight=5,MaxWeight=20)
-#------------------------------------------------COCO Reader----------------------------------------------------------------------------------------------------------------------------------
 #=========================Load Paramters====================================================================================================================
 if os.path.exists(TrainedModelWeightDir + "/Defult.torch"): Trained_model_path=TrainedModelWeightDir + "/Defult.torch"
 if os.path.exists(TrainedModelWeightDir+"/Learning_Rate.npy"): Learning_Rate=np.load(TrainedModelWeightDir+"/Learning_Rate.npy")
