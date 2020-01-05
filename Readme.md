@@ -63,7 +63,7 @@ Note: RunPredictionOnFolder.py should run out of the box (as is) using the sampl
 
 
 
-# Training
+# Training general
 There are two training options: one is to train using only with LabPics dataset, this is faster, simpler and gives more accurate results on the test set. The second training option is to use a combination of the LabPics dataset and Vessels classes from the [COCO panoptic dataset](http://cocodataset.org/#download) (Such as bottles/glasses/jars..). This option is more complex to train and gives lower accuracy on the test set but gives a more robust net. 
 
 
