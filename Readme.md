@@ -10,7 +10,7 @@ The net focus on detecting vessels and their content materials in images. The fo
 
 
  ![](/Figure1.jpg)
-Figure 1) Input images and output results of the net. Images taken from the [NileRed[(https://www.youtube.com/user/TheRedNile) youtube channel.
+Figure 1) Input images and output results of the net. Images taken from the [NileRed](https://www.youtube.com/user/TheRedNile) youtube channel.
  
 
 
@@ -133,8 +133,8 @@ TrainingDataGenerationCOCO folder: Convert COCO dataset for training data.
 
 
 
-# Notes
-The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as NileRide, NurdeRage, and Chemplayer, douglas lab, Koen2All and from Instagram channels such as Chemistrylife, organic Chemistry lab, Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
+# Notes/Thanks
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as [NileRide](https://www.youtube.com/user/TheRedNile), [NurdRage](https://www.youtube.com/user/NurdRage), and [Chemplayer](https://www.youtube.com/channel/UCsJHe4uMbquncMpe1PiLa2A), [douglas lab](https://www.youtube.com/channel/UCR3CEAL-y3CoMf4oJOJgtEw), [Koen2All](https://www.youtube.com/user/koen2all) and from Instagram channels such as Chemistrylife, organic Chemistry lab, Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
 
 Work was done in the Matter Lab (Alan Aspuru Guzik group) and the Vector institute Toronto.
 
