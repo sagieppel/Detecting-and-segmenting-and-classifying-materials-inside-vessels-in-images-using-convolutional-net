@@ -10,7 +10,7 @@ The net focus on detecting vessels and their content materials in images. The fo
 
 
  ![](/Figure1.jpg)
-Figure 1) Input images and output results of the net.
+Figure 1) Input images and output results of the net. Images taken from the NiileRed youtube channel.
  
 
 
