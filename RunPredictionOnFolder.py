@@ -20,11 +20,16 @@ OutEnding="" # Add This to file name
 if not os.path.exists(OutDir): os.makedirs(OutDir) # Create folder for trained weight
 
 #-----------------------------------------Location of the pretrain model-----------------------------------------------------------------------------------
-Trained_model_path ="logs//280000.torch"
+Trained_model_path ="logs//TrainedModelWeiht1m_steps_Semantic_TrainedWithLabPicsAndCOCO_AllSets.torch"
 ##################################Load net###########################################################################################
 #---------------------Create and Initiate net and create optimizer------------------------------------------------------------------------------------
 Net=FCN.Net(CatDic.CatNum) # Create net and load pretrained encoder path
-Net.load_state_dict(torch.load(Trained_model_path))
+if UseGPU==True:
+    print("USING GPU")
+    Net.load_state_dict(torch.load(Trained_model_path))
+else:
+    print("USING CPU")
+    Net.load_state_dict(torch.load(Trained_model_path, map_location=torch.device('cpu')))
 #--------------------------------------------------------------------------------------------------------------------------
 # Net.half()
 for name in os.listdir(InputDir): # Main read and predict results for all files
@@ -45,6 +50,7 @@ for name in os.listdir(InputDir): # Main read and predict results for all files
     with torch.autograd.no_grad():
           OutProbDict,OutLbDict=Net.forward(Images=Imgs,TrainMode=False,UseGPU=UseGPU, FreezeBatchNormStatistics=FreezeBatchNormStatistics) # Run net inference and get prediction
 #...............................Save prediction on fil
+    print("Saving output to: " + OutDir)
     for nm in OutLbDict:
         Lb=OutLbDict[nm].data.cpu().numpy()[0].astype(np.uint8)
         if Lb.mean()<0.001: continue
@@ -59,6 +65,7 @@ for name in os.listdir(InputDir): # Main read and predict results for all files
         if not os.path.exists(OutPath): os.makedirs(OutPath)
         OutName=OutPath+name[:-4]+OutEnding+".png"
         cv2.imwrite(OutName,FinIm)
+
 
 
 
