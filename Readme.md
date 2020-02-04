@@ -61,7 +61,10 @@ Note: RunPredictionOnFolder.py should run out of the box (as is) using the sampl
 *  If you have a Nvidia GPU and Cuda installed, set the UseGPU parameter to True (this will allow the net to achieve a much faster running time).
 * Changing FreezeBatchNormStatistics parameter from False to True might change the segmentation quality for better or worst (and so does changing the image size)
 
+## Additional Running scripts:
+* RunPredictionOnVideo.py script: receive an Input video in InputVideo apply prediction overlay the prediction on the image  and save it to video files.
 
+* RunPredictionOnVideo.py script: Take image from web come run prediction overlay the prediction on the image  and display on screen
 
 # Training general
 There are two training options: one is to train using only with LabPics dataset, this is faster, simpler and gives more accurate results on the test set. The second training option is to use a combination of the LabPics dataset and Vessels classes from the [COCO panoptic dataset](http://cocodataset.org/#download) (Such as bottles/glasses/jars..). This option is more complex to train and gives lower accuracy on the test set but gives a more robust net. 
