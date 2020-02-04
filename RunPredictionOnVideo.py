@@ -47,7 +47,7 @@ while (cap.isOpened()):
     # ..................Read and resize image...............................................................................
 
     ret, Im = cap.read()
-    if ret == False: continue
+    if ret == False: break
         # Display the resulting frame
 
     h,w,d=Im.shape
