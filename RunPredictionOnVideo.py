@@ -111,7 +111,7 @@ while (cap.isOpened()):
     VesMat = OutLbDict['Vessel'].data.cpu().numpy()[0].astype(np.uint8)
     for nm in AllCatName:
         Lb=OutLbDict[nm].data.cpu().numpy()[0].astype(np.uint8)
-        if Lb.mean()<0.0005: continue
+        if Lb.mean()<0.0002: continue
         if nm=='Ignore': continue
         font = cv2.FONT_HERSHEY_SIMPLEX
 
