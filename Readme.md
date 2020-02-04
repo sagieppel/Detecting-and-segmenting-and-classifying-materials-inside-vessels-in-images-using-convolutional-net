@@ -75,13 +75,7 @@ There are two training options: one is to train using only with LabPics dataset,
 2. Open the Train.py script
 3. Set the path to the LabPics dataset main folder to the TrainFolderPath parameter.
 4. Run the script 
-5. Output trained model will appear in the /log subfolder or any folder set in Trained model Path.
-* Around 28000 training steps which correspond to two days training with Titan TX should give a model of the same performance as the one that can be download from [here]
-
-
-
-
-
+5. Output trained model will appear in the /log subfolder or any folder set in Trained model Path
 
 
 
