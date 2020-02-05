@@ -48,7 +48,7 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 
 
 # Running inference on image and predicting segment mask
-1. Download the code with trained model weight from [Here](https://drive.google.com/file/d/1AtZFRyKAiEk9Pfip636_c7tZJjT0xUOP/view?usp=sharing) or [here](https://drive.google.com/file/d/1E9oABPr84FOVTbaF2CnLm8qq9tbV4yY6/view?usp=sharing). or train the model yourself using the instructions of the Training section.
+1. Download the code with trained model weight from [here](https://drive.google.com/file/d/1AtZFRyKAiEk9Pfip636_c7tZJjT0xUOP/view?usp=sharing) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing). or train the model yourself using the instructions of the Training section.
 2. Open the RunPredictionOnFolder.py script.
 3. Set the path to the folder where the images are stored to the: InputDir parameter (all the images in the input folder should be in .jpg or .png format)
 4. Set the output folder where the output will be stored to the: OutDir parameter.
@@ -140,4 +140,4 @@ The [LabPics dataset](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsX
 # Links
 LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 
-Train model for this net can be download from [here](https://drive.google.com/file/d/1AtZFRyKAiEk9Pfip636_c7tZJjT0xUOP/view?usp=sharing) or [here](https://drive.google.com/file/d/1E9oABPr84FOVTbaF2CnLm8qq9tbV4yY6/view?usp=sharing).
+Train model for this net can be download from [here](https://drive.google.com/file/d/1AtZFRyKAiEk9Pfip636_c7tZJjT0xUOP/view?usp=sharing) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing)..
