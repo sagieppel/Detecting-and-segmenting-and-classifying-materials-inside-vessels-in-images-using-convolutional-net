@@ -138,7 +138,7 @@ Train model for this net can be download from [here](https://drive.google.com/fi
 
 # Thanks
 
-The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) supplied by the following sources Nessa Carson (@SuperScienceGrl Twitter), Chemical and Engineering Science chemistry in pictures, YouTube channels dedicated to chemistry experiments: NurdRage, NileRed, DougsLab, ChemPlayer, and Koen2All. Additional sources for images include Instagram channels chemistrylover_(Joana Kulizic),Chemistry.shz (Dr.Shakerizadeh-shirazi), MinistryOfChemistry, Chemistry And Me, ChemistryLifeStyle, vacuum_distillation, and Organic_Chemistry_Lab
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) were supplied by the following sources Nessa Carson (@SuperScienceGrl Twitter), Chemical and Engineering Science chemistry in pictures, YouTube channels dedicated to chemistry experiments: NurdRage, NileRed, DougsLab, ChemPlayer, and Koen2All. Additional sources for images include Instagram channels chemistrylover_(Joana Kulizic),Chemistry.shz (Dr.Shakerizadeh-shirazi), MinistryOfChemistry, Chemistry And Me, ChemistryLifeStyle, vacuum_distillation, and Organic_Chemistry_Lab
 
 Work was done in the Matter Lab (Alan Aspuru Guzik group) and the Vector institute Toronto.
 
