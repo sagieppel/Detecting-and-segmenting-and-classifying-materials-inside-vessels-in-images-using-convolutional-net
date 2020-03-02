@@ -131,7 +131,7 @@ TrainingDataGenerationCOCO folder: Convert COCO dataset for training data.
 
 
 # Notes/Thanks
-The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken from Youtube channels such as [NileRide](https://www.youtube.com/user/TheRedNile), [NurdRage](https://www.youtube.com/user/NurdRage), and [Chemplayer](https://www.youtube.com/channel/UCsJHe4uMbquncMpe1PiLa2A), [douglas lab](https://www.youtube.com/channel/UCR3CEAL-y3CoMf4oJOJgtEw), [Koen2All](https://www.youtube.com/user/koen2all) and from Instagram channels such as Chemistrylife, organic Chemistry lab, Chemistry and me, Ministry Of Chemistry , vacuum distillation, Cocktail.
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken This sources include Nessa Carson (@SuperScienceGrl Twitter), Chemical and Engineering Science chemistry in pictures, YouTube channels dedicated to chemistry experiments: NurdRage, NileRed, DougsLab, ChemPlayer, and Koen2All. Additional sources for images include Instagram channels chemistrylover_(Joana Kulizic),Chemistry.shz (Dr.Shakerizadeh-shirazi), MinistryOfChemistry, Chemistry And Me, ChemistryLifeStyle, vacuum_distillation, and Organic_Chemistry_Lab
 
 Work was done in the Matter Lab (Alan Aspuru Guzik group) and the Vector institute Toronto.
 
