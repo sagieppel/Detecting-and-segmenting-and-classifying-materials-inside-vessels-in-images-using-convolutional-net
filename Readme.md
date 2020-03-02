@@ -127,6 +127,9 @@ COCO_TRAIN.py:  Training script for second training mode (with COCO).
 CocoReader.py: Reader for the converted COCO data.
 
 TrainingDataGenerationCOCO folder: Convert COCO dataset for training data.
+### Results on videos
+Results on of the nets on videos can be seen here:
+https://www.youtube.com/playlist?list=PLRiTwBVzSM3B6MirlFl6fW0YQR4TtQmtJ
 
 
 
