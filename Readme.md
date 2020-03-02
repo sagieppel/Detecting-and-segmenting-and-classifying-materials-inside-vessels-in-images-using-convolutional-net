@@ -131,16 +131,17 @@ TrainingDataGenerationCOCO folder: Convert COCO dataset for training data.
 Results on of the nets on videos can be seen here:
 https://www.youtube.com/playlist?list=PLRiTwBVzSM3B6MirlFl6fW0YQR4TtQmtJ
 
+# Links
+LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 
+Train model for this net can be download from [here](https://drive.google.com/file/d/1AtZFRyKAiEk9Pfip636_c7tZJjT0xUOP/view?usp=sharing) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing)..
 
-# Notes/Thanks
-The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing)    were taken This sources include Nessa Carson (@SuperScienceGrl Twitter), Chemical and Engineering Science chemistry in pictures, YouTube channels dedicated to chemistry experiments: NurdRage, NileRed, DougsLab, ChemPlayer, and Koen2All. Additional sources for images include Instagram channels chemistrylover_(Joana Kulizic),Chemistry.shz (Dr.Shakerizadeh-shirazi), MinistryOfChemistry, Chemistry And Me, ChemistryLifeStyle, vacuum_distillation, and Organic_Chemistry_Lab
+# Thanks
+
+The images for the [LabPics dataset](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) supplied by the following sources Nessa Carson (@SuperScienceGrl Twitter), Chemical and Engineering Science chemistry in pictures, YouTube channels dedicated to chemistry experiments: NurdRage, NileRed, DougsLab, ChemPlayer, and Koen2All. Additional sources for images include Instagram channels chemistrylover_(Joana Kulizic),Chemistry.shz (Dr.Shakerizadeh-shirazi), MinistryOfChemistry, Chemistry And Me, ChemistryLifeStyle, vacuum_distillation, and Organic_Chemistry_Lab
 
 Work was done in the Matter Lab (Alan Aspuru Guzik group) and the Vector institute Toronto.
 
 The [LabPics dataset](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing) was made by Mor Bismuth.
 
-# Links
-LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 
-Train model for this net can be download from [here](https://drive.google.com/file/d/1AtZFRyKAiEk9Pfip636_c7tZJjT0xUOP/view?usp=sharing) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing)..
