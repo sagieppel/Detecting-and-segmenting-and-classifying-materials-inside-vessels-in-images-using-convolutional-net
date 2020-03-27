@@ -3,7 +3,7 @@
 
 Neural net that given an image, detects and segments and classifies the vessels (mainly transparent vessels) and the materials inside the vessels in the image (Figure 1). The net marks the vessel region, the filled region inside the vessel, and the specific region of various a phase of materials such as liquid, solid, foam, suspension, powder, granular... In addition, the net also predicts the region of the vessel labels cork and other parts (such as valves in separatory funnels). Note this is a semantic segmentation net based on PSP net.
 
-See paper [Computer vision for recognition of materials andvessels in chemistry lab settings and theVector-LabPics dataset] (https://chemrxiv.org/articles/Computer_Vision_for_Recognition_of_Materials_and_Vessels_in_Chemistry_Lab_Settings_and_the_Vector-LabPics_Dataset/11930004) for more details
+See paper [Computer vision for recognition of materials andvessels in chemistry lab settings and theVector-LabPics dataset](https://chemrxiv.org/articles/Computer_Vision_for_Recognition_of_Materials_and_Vessels_in_Chemistry_Lab_Settings_and_the_Vector-LabPics_Dataset/11930004) for more details on the method and dataset.
 
 ### This net with a pretrained model that can be run out of the box, without training can be download from [here](https://zenodo.org/record/3697767) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing).
 
