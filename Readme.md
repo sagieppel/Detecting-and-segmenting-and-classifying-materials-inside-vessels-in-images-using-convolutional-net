@@ -43,7 +43,7 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 1) Install [Anaconda](https://www.anaconda.com/download/)
 2) Install [Pytorch](https://pytorch.org/)
 2) Install OpenCV
-3) Download the code with trained model weight from [Here]
+3) Download the code with trained model weight from [here](https://zenodo.org/record/3697767) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing).
 
 
 # Tutorial
@@ -63,10 +63,10 @@ Note: RunPredictionOnFolder.py should run out of the box (as is) using the sampl
 *  If you have a Nvidia GPU and Cuda installed, set the UseGPU parameter to True (this will allow the net to achieve a much faster running time).
 * Changing FreezeBatchNormStatistics parameter from False to True might change the segmentation quality for better or worst (and so does changing the image size)
 
-## Additional Running scripts:
+## Additional Running scripts, running on videos and webcam:
 * RunPredictionOnVideo.py script: receive an Input video in InputVideo apply prediction overlay the prediction on the image  and save it to video files.
 
-* RunPredictionWebCam.py script: Take image from web come run prediction overlay the prediction on the image  and display on screen
+* RunPredictionWebCam.py script: Take image from webcam run prediction overlay the prediction on the image  and display on screen
 
 # Training general
 There are two training options: one is to train using only with LabPics dataset, this is faster, simpler. The second training option is to use a combination of the LabPics dataset and Vessels classes from the [COCO panoptic dataset](http://cocodataset.org/#download) (Such as bottles/glasses/jars..). This option is more complex to train and gives lower accuracy on the test set but gives a more robust net that work under a wider set of conditions. 
