@@ -1,0 +1,9 @@
+name: vessel-segmentation
+channels:
+  - pytorch
+dependencies:
+  - pytorch
+  - torchvision
+  - scipy
+  - pip:
+    - opencv-python

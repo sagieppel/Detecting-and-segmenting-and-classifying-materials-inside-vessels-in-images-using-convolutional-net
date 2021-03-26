@@ -41,9 +41,9 @@ This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/downloa
 
 # Setup for running prediction
 1) Install [Anaconda](https://www.anaconda.com/download/)
-2) Install [Pytorch](https://pytorch.org/)
-2) Install OpenCV
-3) Download the code with trained model weight from [here](https://zenodo.org/record/3697767) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing).
+2) Create a virtual environment with the required dependencies ([Pytorch](https://pytorch.org/), torchvision, scipy and OpenCV): *conda env create -f environment.yml*
+3) Activate the virtual environment: *conda activate vessel-segmentation*
+4) Download the code with trained model weight from [here](https://zenodo.org/record/3697767) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing).
 
 
 # Tutorial
