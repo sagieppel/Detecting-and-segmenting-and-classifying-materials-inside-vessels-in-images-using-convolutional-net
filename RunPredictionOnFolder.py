@@ -1,26 +1,35 @@
 
 #...............................Imports..................................................................
 
+import argparse
 import os
 import torch
 import numpy as np
 import FCN_NetModel as FCN # The net Class
 import CategoryDictionary as CatDic
 import cv2
-#import scipy.misc as misc
 
 ############################################Input parameters###################################################################################
 #-------------------------------------Input parameters-----------------------------------------------------------------------
-InputDir="InputImages/" # Folder of input images
-OutDir="Out/" # Folder of output
+parser = argparse.ArgumentParser()
+parser.add_argument('--inputdir', type=str, default='InputImages/')
+parser.add_argument('--outdir', type=str, default='Out/')
+parser.add_argument('--gpu', type=str, default=False)
+parser.add_argument('--freeze', type=str, default=False)
+parser.add_argument('--trainedmodel', type=str, default='logs//TrainedModelWeiht1m_steps_Semantic_TrainedWithLabPicsAndCOCO_AllSets.torch')
 
-UseGPU=False # Use GPU or CPU  for prediction (GPU faster but demend nvidia GPU and CUDA installed else set UseGPU to False)
-FreezeBatchNormStatistics=False # wether to freeze the batch statics on prediction  setting this true or false might change the prediction mostly False work better
+opt_parser = parser.parse_args()
+
+InputDir=opt_parser.inputdir # Folder of input images
+OutDir=opt_parser.outdir # Folder of output
+
+UseGPU=bool(opt_parser.gpu) # Use GPU or CPU  for prediction (GPU faster but demend nvidia GPU and CUDA installed else set UseGPU to False)
+FreezeBatchNormStatistics=bool(opt_parser.freeze) # wether to freeze the batch statics on prediction  setting this true or false might change the prediction mostly False work better
 OutEnding="" # Add This to file name
 if not os.path.exists(OutDir): os.makedirs(OutDir) # Create folder for trained weight
 
 #-----------------------------------------Location of the pretrain model-----------------------------------------------------------------------------------
-Trained_model_path ="logs//TrainedModelWeiht1m_steps_Semantic_TrainedWithLabPicsAndCOCO_AllSets.torch"
+Trained_model_path = opt_parser.trainedmodel
 ##################################Load net###########################################################################################
 #---------------------Create and Initiate net and create optimizer------------------------------------------------------------------------------------
 Net=FCN.Net(CatDic.CatNum) # Create net and load pretrained encoder path
