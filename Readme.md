@@ -35,8 +35,7 @@ For training the net an Nvidia GPU is needed (the net was trained on Titan XP, a
 
 ## Software:
 This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/download/) with  [Pytorch](https://pytorch.org/) and OpenCV packages.
-Setting enviroment: 
-conda env create -f environment.yml
+
 
 
 
