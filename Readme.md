@@ -34,8 +34,8 @@ For using the trained net, no specific hardware is needed, but the net will run 
 For training the net an Nvidia GPU is needed (the net was trained on Titan XP, and also on RTX 2070 with similar results)
 
 ## Software:
-This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/download/) with  [Pytorch](https://pytorch.org/) and OpenCV packages.
-
+This network was run with Python 3.7 [Anaconda](https://www.anaconda.com/download/) with  [Pytorch](https://pytorch.org/) and OpenCV packages*.
+* Installing opencv for conda can usually be done using: pip install opencv-python or conda install opencv
 
 
 
