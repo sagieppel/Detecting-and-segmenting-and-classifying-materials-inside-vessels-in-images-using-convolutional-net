@@ -88,7 +88,7 @@ There are two training options: one is to train using only with LabPics dataset,
 
 2. Download the [COCO panoptic dataset](http://cocodataset.org/#download) annotation and train images.
 ### Converting COCO dataset into training data
-* Note a converted version of the COCO dataset can be downloaded from [here](https://icedrive.net/0/573y9eCWuI) (allow you to skip steps 3-8)
+* Note a converted version of the COCO dataset can be downloaded from [here](https://icedrive.net/0/c5NqTAyVdn) (allow you to skip steps 3-8)
  
 3. Open script TrainingDataGenerationCOCO/RunDataGeneration.py
 4. Set the COCO dataset image folder to the ImageDir parameter.
