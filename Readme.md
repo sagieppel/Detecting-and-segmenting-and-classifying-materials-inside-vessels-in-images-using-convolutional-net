@@ -83,11 +83,13 @@ There are two training options: one is to train using only with LabPics dataset,
 
 ## Training second option (With LabPics dataset and Vessels from  the COCO panoptic dataset)
 ### Downloading datasets
-1. Download the LabPics data set from [Here](https://zenodo.org/record/3697452) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
+1. Download the LabPics data set from [Here](https://zenodo.org/record/3697452) or [here](https://icedrive.net/0/adRjfQvV1y)
 
 
 2. Download the [COCO panoptic dataset](http://cocodataset.org/#download) annotation and train images.
 ### Converting COCO dataset into training data
+* Note a converted version of the COCO dataset can be downloaded from [here](https://icedrive.net/0/573y9eCWuI) (allow you to skip steps 3-8)
+ 
 3. Open script TrainingDataGenerationCOCO/RunDataGeneration.py
 4. Set the COCO dataset image folder to the ImageDir parameter.
 5. Set the COCO panoptic annotation folder to the AnnotationDir parameter.
@@ -108,7 +110,7 @@ There are two training options: one is to train using only with LabPics dataset,
 # Code file structure
 RunPredictionOnFolder.py: Run prediction on image using pre-trained image
 
-Train.py: Training the net of the [LabPics](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) dataset
+Train.py: Training the net of the [LabPics](https://icedrive.net/0/adRjfQvV1y) dataset
 
 ChemReader.py: File reader for the LabPics dataset (used by the Train.py script)
 
@@ -134,9 +136,9 @@ Results on of the nets on videos can be seen here:
 https://www.youtube.com/playlist?list=PLRiTwBVzSM3B6MirlFl6fW0YQR4TtQmtJ
 
 # Links
-LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://drive.google.com/file/d/1TZao7JDzxcJr_hMqYHLRcV2N0UHoH2c1/view?usp=sharing) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
+LabPics dataset for annotated images of liquid, solid and foam materials in mostly transperent vessels in Lab setting and general everyday setting can be download from [here](https://icedrive.net/0/adRjfQvV1y) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
 
-Train model for this net can be download from [here](https://zenodo.org/record/3697767) or [here](https://drive.google.com/file/d/1wWGPoa7aKBlvml6Awe4AzJUbNlR72K6X/view?usp=sharing)..
+Train model for this net can be download from [here](https://zenodo.org/record/3697767) or [here](https://icedrive.net/0/adRjfQvV1y)..
 
 # Thanks
 
