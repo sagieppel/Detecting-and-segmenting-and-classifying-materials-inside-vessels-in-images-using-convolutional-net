@@ -35,7 +35,7 @@ MinSize=250 # Min image Height/Width
 MaxSize=1000# Max image Height/Width
 MaxPixels=340000*3# Max pixel in batch can have (to keep oom out of memory problems) if the image larger it will be resized.
 TrainLossTxtFile=TrainedModelWeightDir+"TrainLoss.txt" #Where train losses will be writen
-Weight_Decay=1e-4# Weight for the weight decay loss function
+Weight_Decay=1e-5# Weight for the weight decay loss function
 MAX_ITERATION = int(10000000010) # Max  number of training iteration
 InitStep=0
 #-----------------Generate evaluator class for net evaluating------------------------------------------------------------------------------------------------------------------------------------------------
