@@ -55,7 +55,7 @@ if Trained_model_path!="": # Optional initiate full net by loading a pretrained 
     Net.load_state_dict(torch.load(Trained_model_path))
 Net=Net.cuda()
 #optimizer=torch.optim.SGD(params=Net.parameters(),lr=Learning_Rate,weight_decay=Weight_Decay,momentum=0.5)
-optimizer=torch.optim.AdamW(params=Net.parameters(),lr=Learning_Rate,weight_decay=Weight_Decay) # Create adam optimizer
+optimizer=torch.optim.Adam(params=Net.parameters(),lr=Learning_Rate,weight_decay=Weight_Decay) # Create adam optimizer
 #--------------------------- Create list for saving statistics----------------------------------------------------------------------------------------------------------
 AVGLoss={}
 for nm in CatDic.CatLossWeight:
@@ -70,7 +70,7 @@ for nm in AVGLoss: txt+="\t"+nm+" loss"
 f.write(txt+"\n")
 f.close()
 #..............Start Training loop: Main Training....................................................................
-scaler = torch.cuda.amp.GradScaler() # For mixed precision
+
 print("Start Training")
 for itr in range(InitStep,MAX_ITERATION): # Main training loop
     Imgs, Ignore, AnnMaps, AnnMapsBG = ChemReader.LoadBatch()
@@ -99,9 +99,10 @@ for itr in range(InitStep,MAX_ITERATION): # Main training loop
             LossByCat[nm]=-torch.mean(ROI*(GT * torch.log(OutProbDict[nm][:,1,:,:] + 0.0000001)+(1-GT) * torch.log(OutProbDict[nm][:,0,:,:] + 0.0000001)))
             Loss=LossByCat[nm]*CatDic.CatLossWeight[nm]+Loss
 
-    scaler.scale(Loss).backward()  # Backpropogate loss caler used for mix precision
-    scaler.step(optimizer)  # Apply gradient descent change to weight scaler used for mix precision
-    scaler.update()
+
+
+    Loss.backward() # Backpropogate loss
+    optimizer.step() # Apply gradient descent change to weight
 
 #-----------Update loss statitics-------------------------------------------------------------------------------------------------
     if AVGtotalLoss == -1:
