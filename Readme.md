@@ -74,10 +74,11 @@ There are two training options: one is to train using only with LabPics dataset,
 
 # Training simple (only LabPics)
 1. Download the LabPics data set from [Here](https://zenodo.org/record/3697452) or [here](https://drive.google.com/file/d/1gfaM_6eZjtg7dkFShGl1gIfsXzj1KjIX/view?usp=sharing)
-2. Open the Train.py script
+2. Open the Train.py** script
 3. Set the path to the LabPics dataset main folder to the TrainFolderPath parameter.
 4. Run the script 
 5. Output trained model will appear in the /log subfolder or any folder set in Trained model Path
+** Train_old.py is the original train function used in the paper.
 
 
 
