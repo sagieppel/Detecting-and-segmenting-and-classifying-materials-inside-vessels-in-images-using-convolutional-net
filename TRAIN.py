@@ -85,69 +85,69 @@ for itr in range(InitStep,MAX_ITERATION): # Main training loop
    # #     misc.imshow((PredMask[oo,:,:]*0+GTMask[oo,:,:]))
    #      misc.imshow(np.concatenate([Imgs[oo],im],axis=0))
 
-
-    OutProbDict,OutLbDict=Net.forward(Images=Imgs,TrainMode=True) # Run net inference and get prediction
-    Net.zero_grad()
-#------------------------Calculate Loss for each class and sum the losses---------------------------------------------------------------------------------------------------
-    Loss = 0
-    LossByCat={}
-    ROI = torch.autograd.Variable(torch.from_numpy((1-Ignore).astype(np.float32)).cuda(), requires_grad=False)
-    for nm in OutProbDict:
-        if CatDic.CatLossWeight[nm]<=0: continue
-        if nm in AnnMaps:
-            GT=torch.autograd.Variable( torch.from_numpy(AnnMaps[nm].astype(np.float32)).cuda(), requires_grad=False)
-            LossByCat[nm]=-torch.mean(ROI*(GT * torch.log(OutProbDict[nm][:,1,:,:] + 0.0000001)+(1-GT) * torch.log(OutProbDict[nm][:,0,:,:] + 0.0000001)))
-            Loss=LossByCat[nm]*CatDic.CatLossWeight[nm]+Loss
-
-    scaler.scale(Loss).backward()  # Backpropogate loss caler used for mix precision
-    scaler.step(optimizer)  # Apply gradient descent change to weight scaler used for mix precision
-    scaler.update()
+    with torch.cuda.amp.autocast():
+        OutProbDict,OutLbDict=Net.forward(Images=Imgs,TrainMode=True) # Run net inference and get prediction
+        Net.zero_grad()
+    #------------------------Calculate Loss for each class and sum the losses---------------------------------------------------------------------------------------------------
+        Loss = 0
+        LossByCat={}
+        ROI = torch.autograd.Variable(torch.from_numpy((1-Ignore).astype(np.float32)).cuda(), requires_grad=False)
+        for nm in OutProbDict:
+            if CatDic.CatLossWeight[nm]<=0: continue
+            if nm in AnnMaps:
+                GT=torch.autograd.Variable( torch.from_numpy(AnnMaps[nm].astype(np.float32)).cuda(), requires_grad=False)
+                LossByCat[nm]=-torch.mean(ROI*(GT * torch.log(OutProbDict[nm][:,1,:,:] + 0.0000001)+(1-GT) * torch.log(OutProbDict[nm][:,0,:,:] + 0.0000001)))
+                Loss=LossByCat[nm]*CatDic.CatLossWeight[nm]+Loss
+    
+        scaler.scale(Loss).backward()  # Backpropogate loss caler used for mix precision
+        scaler.step(optimizer)  # Apply gradient descent change to weight scaler used for mix precision
+        scaler.update()
 
 #-----------Update loss statitics-------------------------------------------------------------------------------------------------
-    if AVGtotalLoss == -1:
-        AVGtotalLoss = float(Loss.data.cpu().numpy())  # Calculate average loss for display
-    else:
-        AVGtotalLoss = AVGtotalLoss * 0.999 + 0.001 * float(Loss.data.cpu().numpy())
+        if AVGtotalLoss == -1:
+            AVGtotalLoss = float(Loss.data.cpu().numpy())  # Calculate average loss for display
+        else:
+            AVGtotalLoss = AVGtotalLoss * 0.999 + 0.001 * float(Loss.data.cpu().numpy())
 
-    for nm in LossByCat:
-        if AVGLoss[nm]==-1:  AVGLoss[nm]=float(LossByCat[nm].data.cpu().numpy()) #Calculate average loss for display
-        else: AVGLoss[nm]= AVGLoss[nm]*0.999+0.001*float(LossByCat[nm].data.cpu().numpy()) # Intiate runing average loss
-# --------------Save trained model------------------------------------------------------------------------------------------------------------------------------------------
-    if itr % 2000 == 0 and itr>0: #Save model weight once every 10k steps
-        print("Saving Model to file in "+TrainedModelWeightDir+"/Defult.torch")
-        torch.save(Net.state_dict(), TrainedModelWeightDir + "/Defult.torch")
-        torch.save(Net.state_dict(), TrainedModelWeightDir + "/DefultBack.torch")
-        print("model saved")
-        np.save(TrainedModelWeightDir+"/Learning_Rate.npy",Learning_Rate)
-        np.save(TrainedModelWeightDir+"/Learning_Rate_Init.npy",Learning_Rate_Init)
-        np.save(TrainedModelWeightDir+"/itr.npy",itr)
-    if itr % 10000 == 0 and itr>1: #Save model weight once every 10k steps
-        print("Saving Model to file in "+TrainedModelWeightDir+"/"+ str(itr) + ".torch")
-        torch.save(Net.state_dict(), TrainedModelWeightDir + "/" + str(itr) + ".torch")
-        print("model saved")
-#--------------------------Evaluate trained net-------------------------------------------------------------------------
-    if itr % 10000 == 0:
-        Eval.Eval(Net,itr)
-#......................Write and display train loss..........................................................................
-    if itr % 50==0: # Display train loss
+        for nm in LossByCat:
+            if AVGLoss[nm]==-1:  AVGLoss[nm]=float(LossByCat[nm].data.cpu().numpy()) #Calculate average loss for display
+            else: AVGLoss[nm]= AVGLoss[nm]*0.999+0.001*float(LossByCat[nm].data.cpu().numpy()) # Intiate runing average loss
+    # --------------Save trained model------------------------------------------------------------------------------------------------------------------------------------------
+        if itr % 2000 == 0 and itr>0: #Save model weight once every 10k steps
+            print("Saving Model to file in "+TrainedModelWeightDir+"/Defult.torch")
+            torch.save(Net.state_dict(), TrainedModelWeightDir + "/Defult.torch")
+            torch.save(Net.state_dict(), TrainedModelWeightDir + "/DefultBack.torch")
+            print("model saved")
+            np.save(TrainedModelWeightDir+"/Learning_Rate.npy",Learning_Rate)
+            np.save(TrainedModelWeightDir+"/Learning_Rate_Init.npy",Learning_Rate_Init)
+            np.save(TrainedModelWeightDir+"/itr.npy",itr)
+        if itr % 10000 == 0 and itr>1: #Save model weight once every 10k steps
+            print("Saving Model to file in "+TrainedModelWeightDir+"/"+ str(itr) + ".torch")
+            torch.save(Net.state_dict(), TrainedModelWeightDir + "/" + str(itr) + ".torch")
+            print("model saved")
+    #--------------------------Evaluate trained net-------------------------------------------------------------------------
+        if itr % 10000 == 0:
+            Eval.Eval(Net,itr)
+    #......................Write and display train loss..........................................................................
+        if itr % 50==0: # Display train loss
 
-        txt="\nIteration\t="+str(itr)+"\tLearning Rate\t"+str(Learning_Rate)+"\tInit_LR=\t"+str(Learning_Rate_Init)+"\tLoss=\t"+str(AVGtotalLoss)+"\t"
-        for nm in AVGLoss:
-            txt+="\t"+nm+"=\t"+str(AVGLoss[nm])
-        print(txt)
-        #Write train loss to file
-        with open(TrainLossTxtFile, "a") as f:
-            f.write(txt)
-            f.close()
-#----------------Update learning rate fractal manner-------------------------------------------------------------------------------
-    if itr%10000==0 and itr>=StartLRDecayAfterSteps:
-        Learning_Rate-= Learning_Rate_Decay
-        if Learning_Rate<=1e-7:
-            Learning_Rate_Init-=2e-6
-            if Learning_Rate_Init<1e-6: Learning_Rate_Init=1e-6
-            Learning_Rate=Learning_Rate_Init*1.00001
-            Learning_Rate_Decay=Learning_Rate/20
-        print("Learning Rate="+str(Learning_Rate)+"   Learning_Rate_Init="+str(Learning_Rate_Init))
-        print("======================================================================================================================")
-        optimizer = torch.optim.Adam(params=Net.parameters(), lr=Learning_Rate,weight_decay=Weight_Decay)  # Create adam optimizer
-        torch.cuda.empty_cache()  # Empty cuda memory to avoid memory leaks
+            txt="\nIteration\t="+str(itr)+"\tLearning Rate\t"+str(Learning_Rate)+"\tInit_LR=\t"+str(Learning_Rate_Init)+"\tLoss=\t"+str(AVGtotalLoss)+"\t"
+            for nm in AVGLoss:
+                txt+="\t"+nm+"=\t"+str(AVGLoss[nm])
+            print(txt)
+            #Write train loss to file
+            with open(TrainLossTxtFile, "a") as f:
+                f.write(txt)
+                f.close()
+    #----------------Update learning rate fractal manner-------------------------------------------------------------------------------
+        if itr%10000==0 and itr>=StartLRDecayAfterSteps:
+            Learning_Rate-= Learning_Rate_Decay
+            if Learning_Rate<=1e-7:
+                Learning_Rate_Init-=2e-6
+                if Learning_Rate_Init<1e-6: Learning_Rate_Init=1e-6
+                Learning_Rate=Learning_Rate_Init*1.00001
+                Learning_Rate_Decay=Learning_Rate/20
+            print("Learning Rate="+str(Learning_Rate)+"   Learning_Rate_Init="+str(Learning_Rate_Init))
+            print("======================================================================================================================")
+            optimizer = torch.optim.Adam(params=Net.parameters(), lr=Learning_Rate,weight_decay=Weight_Decay)  # Create adam optimizer
+            torch.cuda.empty_cache()  # Empty cuda memory to avoid memory leaks
