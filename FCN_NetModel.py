@@ -115,7 +115,7 @@ class Net(nn.Module):
 
                 PSPFeatures=[] # Results of various of scaled procceessing
                 for i,PSPLayer in enumerate(self.PSPLayers): # run PSP layers scale features map to various of sizes apply convolution and concat the results
-                      NewSize=(np.array(PSPSize)*self.PSPScales[i]).astype(np.int)
+                      NewSize=(np.array(PSPSize)*self.PSPScales[i]).astype(np.int32)
                       if NewSize[0] < 1: NewSize[0] = 1
                       if NewSize[1] < 1: NewSize[1] = 1
 

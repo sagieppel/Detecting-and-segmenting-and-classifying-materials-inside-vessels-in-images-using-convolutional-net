@@ -125,7 +125,7 @@ class Reader: # Reader for Labpics dataset
         # misc.imshow(Img)
 ######################################################Augmented Image##################################################################################################################################
     def Augment(self,Img,AnnMap,prob): # augment image for training
-        Img=Img.astype(np.float)
+        Img=Img.astype(np.float32)
         if np.random.rand()<0.5: # flip left right
             Img=np.fliplr(Img)
             for i in CatName:
@@ -224,7 +224,7 @@ class Reader: # Reader for Labpics dataset
             Hb = np.random.randint(low=self.MinSize, high=self.MaxSize)  # Batch hight
             Wb = np.random.randint(low=self.MinSize, high=self.MaxSize)  # batch  width
             if Hb*Wb<self.MaxPixels: break
-        BatchSize =  np.int(np.min((np.floor(self.MaxPixels / (Hb * Wb)), self.MaxBatchSize)))
+        BatchSize =  np.int32(np.min((np.floor(self.MaxPixels / (Hb * Wb)), self.MaxBatchSize)))
 
 
         
